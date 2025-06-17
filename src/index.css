@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+.canvas-container {
+  flex: 2;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.canvas-container h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.canvas {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: crosshair;
+  display: block;
+  margin: 0 auto;
+}
+
+.drop-zones {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drop-zone {
+  background: white;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.drop-zone.drag-over {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+  transform: scale(1.02);
+}
+
+.drop-zone h3 {
+  margin-top: 0;
+  color: #666;
+  text-align: center;
+}
+
+.drop-zone p {
+  color: #999;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.dropped-items {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.dropped-item {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.dropped-item strong {
+  color: #0066cc;
+}
+
+.instructions {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.instructions ul {
+  color: #666;
+  line-height: 1.6;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+}
+
+.entity-info {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 200px;
+}
